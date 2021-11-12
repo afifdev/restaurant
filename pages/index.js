@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Navbar from "@components/Navbar";
 import Banner from "@components/Banner";
 import Container from "@components/Container";
@@ -12,14 +13,16 @@ export default function Home() {
       <Head>
         <title>Siresta | Restaurant. Everyone. Easy.</title>
       </Head>
+      <Navbar />
       <Container>
-        <Navbar />
         <BodyContainer>
           <Banner />
           <div className="py-16 text-center font-bold">
-            <span className="rounded-xl border-2 border-black py-4 px-6">
-              Discover
-            </span>
+            <Link href="/discover">
+              <a className="rounded-xl border-2 border-black py-4 px-6">
+                Discover
+              </a>
+            </Link>
           </div>
           <div className="my-8">
             <p className="font-bold text-3xl sm:text-5xl">Our Favorites</p>
